@@ -1,0 +1,174 @@
+.work_content {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.skills_title {
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: rgb(8, 8, 94);
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Main container for skills and icons */
+.both_sections {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  /* justify-content: center; */
+  margin-bottom: 60px;
+}
+
+/* For smaller screens (tablets and phones) */
+@media (max-width: 1024px) {
+  .both_sections {
+      flex-direction: column;  /* Stack on top of each other */
+      gap: 30px;
+      text-align: center;
+  }
+
+  .skills_text {
+      max-width: 90%;  /* Take full width on smaller screens */
+      height: auto;
+      text-align: center;
+  }
+}
+
+/* Skills Text Box */
+.skills_text {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #1b2949;
+  line-height: 1.8;
+  max-width: 500px;
+  height: 320px;
+  display: grid;
+  box-shadow: 0 10px 30px rgba(13, 13, 13, 0.1);
+}
+
+.skills_text p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.skills_text strong {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Icon Section - Grid Layout */
+.icon {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Each icon item */
+.icon_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.icon_item:hover {
+  transform: translateY(-5px);
+}
+
+.icon_item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.icon_item p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Grid rows for icons */
+.first_row, .second_row, .third_row {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  .skills_title {
+      font-size: 36px;
+  }
+  
+  .first_row, .second_row, .third_row {
+      flex-wrap: wrap; /* Allow icons to wrap */
+      gap: 15px;
+  }
+
+  .icon_item {
+      width: 100px;
+      height: 100px;
+  }
+
+  .icon_item img {
+      width: 40px;
+      height: 40px;
+  }
+
+  .icon_item p {
+      font-size: 12px;
+  }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+  .skills_title {
+      font-size: 30px;
+  }
+
+  .both_sections {
+      gap: 15px;
+  }
+
+  .skills_text {
+      padding: 15px;
+      font-size: 14px;
+  }
+
+  .first_row, .second_row, .third_row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .icon_item {
+      width: 80px;
+      height: 80px;
+  }
+
+  .icon_item img {
+      width: 35px;
+      height: 35px;
+  }
+
+  .icon_item p {
+      font-size: 10px;
+  }
+}
+

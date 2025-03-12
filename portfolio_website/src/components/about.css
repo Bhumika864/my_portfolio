@@ -1,0 +1,133 @@
+/* Smooth entrance animation */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0 70px;
+  background-color: white;
+  border-radius: 15px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Keyframe for the entrance animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.text-content {
+  max-width: 50%;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease forwards 0.5s;
+}
+
+/* Text animation */
+@keyframes slideInRight {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.ttitle {
+  font-size: 48px;
+  font-weight: bold;
+  color: rgb(8, 8, 94);
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInDown 1s ease forwards;
+}
+
+/* Title fade in */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.subtitle {
+  font-size: 27px;
+  font-style: italic;
+  color: black;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.8s;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #3d4f73;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1s;
+}
+
+.resume-button {
+  background-color: #1b2949;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.resume-button:hover {
+  background-color: #3d4f73;
+  transform: scale(1.05);
+}
+
+.image-container {
+  max-width: 40%;
+  padding-right: 30px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s ease forwards 0.5s;
+}
+
+/* Image slide in */
+@keyframes slideInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.illustration {
+  width: 100%;
+  height: auto;
+}
+
+.all {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
